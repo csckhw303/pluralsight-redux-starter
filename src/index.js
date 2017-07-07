@@ -10,6 +10,7 @@ import {loadAllAuthors} from './actions/authorActions';
 
 import './styles/styles.css'; //webpack can import css files into bundle
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/toastr/build/toastr.min.css';
 
 const store = configureStore(); //initialState has been missed since the reducers have default parameter
 debugger
