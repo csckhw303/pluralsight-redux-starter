@@ -13,7 +13,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/toastr/build/toastr.min.css';
 
 const store = configureStore(); //initialState has been missed since the reducers have default parameter
-debugger
+
 store.dispatch(loadAllCourses());
 store.dispatch(loadAllAuthors());
 render (

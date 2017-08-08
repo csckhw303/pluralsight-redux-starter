@@ -5,7 +5,7 @@ import React,{PropTypes} from 'react';
 import TextInput from '../common/TextInput';
 import SelectInput from '../common/SelectInput';
 
-
+/**destructured props**/
 const  CourseForm  = ({course, allAuthors, onSave, onChange, saving, errors}) => {
 
       return (

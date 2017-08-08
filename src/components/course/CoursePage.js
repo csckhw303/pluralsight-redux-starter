@@ -1,8 +1,7 @@
 /**
  * Created by ChungCh on 6/9/2017.
  */
-import React from 'react';
-import {PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as courseAction from '../../actions/courseActions';
@@ -22,7 +21,8 @@ class CoursePage extends React.Component {
     browserHistory.push('/course');
   }
   render() {
-        debugger;
+        const {courses} = this.props;
+
         return (
             <div>
               <h1>Courses</h1>
@@ -30,24 +30,22 @@ class CoursePage extends React.Component {
                      value="Add New Course"
                      className="btn btn-primary"
                      onClick={this.redirectToAddCoursePage} />
-              <CourseList courses={this.props.courses}></CourseList>
+              <CourseList courses={courses} />
             </div>
-        )
+        );
   }
 }
 CoursePage.propTypes = {
    actions: PropTypes.object,
    courses: PropTypes.array
-}
+};
 function mapStateToProps(state, ownProps) {
-  debugger;
   return {
     courses: state.courses
   };
 }
 function mapDispatchToProps(dispatch) {
   return {
-    //createCourse: course => dispatch(courseAction.createCourse(course))
     actions: bindActionCreators(courseAction, dispatch)
   };
 }

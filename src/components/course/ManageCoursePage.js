@@ -20,7 +20,7 @@ class ManageCoursePage extends React.Component {
 
     componentWillReceiveProps (nextProps) {
          if(this.state.course.id != nextProps.course.id){
-           this.setState({course: Object.assign({},nextProps.course)})
+           this.setState({course: Object.assign({},nextProps.course)});
          }
     }
 
@@ -28,7 +28,7 @@ class ManageCoursePage extends React.Component {
       const field = event.target.name;
       let course = Object.assign({},this.state.course);
       course[field] = event.target.value;
-      return this.setState({course: course})
+      return this.setState({course: course});
     }
 
     saveCourse(event){
@@ -46,7 +46,6 @@ class ManageCoursePage extends React.Component {
     }
 
     render() {
-        debugger;
         return (
           <div>
             <CourseForm
@@ -75,7 +74,6 @@ ManageCoursePage.contextTypes = {
 function mapStateToProps(state, ownProps) {
     const courseId = ownProps.params.id;
     const targetCourse = state.courses.filter(course => { return course.id == courseId});
-
     let course = targetCourse.length > 0 ? {id: targetCourse[0].id , watchHref:targetCourse[0].watchHref,
                                  title:targetCourse[0].title,
                                  authorId:targetCourse[0].authorId,

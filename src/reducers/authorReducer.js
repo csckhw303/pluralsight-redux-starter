@@ -7,7 +7,7 @@ import InitialState from './InitialState';
 export default function authorReducer(state = InitialState.authors, action) {
   switch (action.type) {
     case Types.LOAD_AUTHORS_SUCCESS:
-      return action.authors
+      return action.authors;
 
     default:
       return state;
