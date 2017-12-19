@@ -4,5 +4,6 @@
 export default {
   authors:[],
   courses:[],
+  matches:[],
   ajaxCallsInProgress: 0
 };
